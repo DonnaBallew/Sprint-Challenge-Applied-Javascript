@@ -17,7 +17,7 @@
     <div class="right-button"> > </div>
   </div>
 */
-
+// referred to the following website: https://www.adamjberkowitz.com/blog/carousel-challenge regarding decrement and increment
 function createCarousel(images) {
   //create elements
   const carousel = document.createElement("div");
