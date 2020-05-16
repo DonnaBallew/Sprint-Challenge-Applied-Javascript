@@ -17,3 +17,47 @@
     <div class="right-button"> > </div>
   </div>
 */
+// referred to the following website: https://www.adamjberkowitz.com/blog/carousel-challenge regarding decrement and increment
+function createCarousel(images) {
+  //create elements
+  const carousel = document.createElement("div");
+  const leftBtn = document.createElement("div");
+  const img1 = document.createElement("img");
+  const img2 = document.createElement("img");
+  const img3 = document.createElement("img");
+  const img4 = document.createElement("img");
+  const rightBtn = document.createElement("div");
+
+  //structure
+  carousel.appendChild(leftBtn);
+  carousel.appendChild(img1);
+  carousel.appendChild(img2);
+  carousel.appendChild(img3);
+  carousel.appendChild(img4);
+  carousel.appendChild(rightBtn);
+
+  //set class names
+  carousel.classList.add("carousel");
+  leftBtn.classList.add("left-button");
+  rightBtn.classList.add("right-button");
+  img1.src = "./assets/carousel/computer.jpeg";
+  img2.src = "./assets/carousel/mountains.jpeg";
+  img3.src = "./assets/carousel/trees.jpeg";
+  img4.src = "./assets/carousel/turntable.jpeg";
+}
+
+let currentIndex = 0;
+
+//add click event - edit
+leftBtn.addEventListener("click", decrement());
+rightBtn.addEventListener("click", increment());
+
+// carouselContainer.forEach((carousel) => {
+//   const c = new Carousel (carousel.id, images);
+// }
+
+const carouselContainer = document.querySelector(".carousel-container");
+carouselContainer.appendChild(createCarousel());
+
+console.log("carousel", carousel);
+return carousel;
